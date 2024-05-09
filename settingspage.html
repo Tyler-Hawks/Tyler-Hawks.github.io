@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>settingspage.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            width: 375px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            z-index: 1;
+        }
+        .settings-container {
+            margin-top: 20px;
+            z-index: 1;
+            padding: 20px;
+            background-color: #008000;
+            border-radius: 10px;
+        }
+        .settings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .settings-row label {
+            width: 40%;
+            text-align: right;
+            margin-right: 10px;
+            color: white;
+        }
+        .settings-row select, .settings-row input[type="checkbox"] {
+            width: 55%;
+            background-color: #ccc;
+        }
+        .settings-row select {
+            color: white;
+        }
+        .settings-row button {
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .settings-row button:hover {
+            background-color: #d63031;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 375px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar button {
+            flex: 1;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+        .button1 { background-image: url('My strret button copy (1).png'); }
+        .button2 { background-image: url('My saved button copy.png'); }
+        .button3 { background-image: url('My settings button copy (1).png'); }
+    </style>
+</head>
+<body>
+    <img class="background" src="Background graffitti3.png" width="378" alt="Background Image">
+    <div class="title">
+        <img src="green with logo copy.jpg" width="378" height="186" alt="title">
+    </div>
+    
+    <div class="settings-container">
+        <div class="settings-row">
+            <label for="shoeSize">Shoe Size:</label>
+            <select id="shoeSize">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+            </select>
+        </div>
+
+        <div class="settings-row">
+            <label for="topSize">Top Size:</label>
+            <select id="topSize">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+        </div>
+
+        <div class="settings-row">
+            <label for="trouserWaist">Trouser Waist:</label>
+            <select id="trouserWaist">
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="38">38</option>
+            </select>
+        </div>
+
+        <div class="settings-row">
+            <label for="trouserLength">Trouser Length:</label>
+            <select id="trouserLength">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="38">38</option>
+            </select>
+        </div>
+
+        <div class="settings-row">
+            <label for="lightMode">Light Mode:</label>
+            <input type="checkbox" id="lightMode">
+        </div>
+
+        <button onclick="reportIssue()">Got an Issue?</button>
+    </div>
+
+    <div class="navbar">
+        <button class="button1" onclick="redirectToNewPage()"></button>
+        <button class="button2" onclick="redirectToNewPage1()"></button>
+        <button class="button3"></button>
+    </div>
+
+    <script>
+        function redirectToNewPage() {
+            var url = "pink page.html";
+            window.location.href = url;
+        }
+
+        function redirectToNewPage1() {
+            var url = "savedpage.html";
+            window.location.href = url;
+        }
+
+        function reportIssue() {
+            alert("Issue reported!");
+        }
+    </script>
+</body>
+</html>
+
